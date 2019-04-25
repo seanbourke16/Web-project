@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Event Reminder</string>
+
+
+    <string name="newEvent">Add New Event</string>
+    <string name="checkEvents">Check Events</string>
+    <string name="sendInv">Send Event Invitations</string>
+
+</resources>
