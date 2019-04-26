@@ -6,4 +6,13 @@
     <string name="checkEvents">Check Events</string>
     <string name="sendInv">Send Event Invitations</string>
 
+    <string name="textName">Enter Event Name</string>
+    <string name="textDate">Enter Event Date</string>
+    <string name="textTime">Enter Event Time</string>
+    <string name="confirm">Create New Event</string>
+    <string name="back">Return to Home</string>
+    <string name="status1">New Event Created</string>
+    <string name="status2">Invalid Date</string>
+    <string name="status3">Invalid Time</string>
+
 </resources>
