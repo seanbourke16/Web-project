@@ -3,6 +3,7 @@ package com.example.eventreminder;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,13 +19,17 @@ public class NewEvent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_event);
         e=getIntent().getParcelableArrayListExtra("e");
+        setup();
+    }
+
+    void setup(){
+        setContentView(R.layout.activity_new_event);
         final Button mDefinitionsButton = findViewById(R.id.confirm);
         mDefinitionsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 createEvent();
-                setContentView(R.layout.activity_new_event);
+                setup();
             }
         });
         final Button mInterpretationsButton = findViewById(R.id.back);
@@ -37,63 +42,81 @@ public class NewEvent extends AppCompatActivity {
         });
     }
 
-    void fail(){
-
-    }
 
     void createEvent(){
+        Log.e("create","start");
         EditText edit=findViewById(R.id.name);
         String n=edit.getText().toString();
         edit=findViewById(R.id.date);
         String d=edit.getText().toString();
-        if(d.length()!=8){
-            fail();
+        Log.e("create","date start");
+        if(d.length()!=10){
+            TextView textView =findViewById(R.id.status);
+            String text="Invalid date";
+            textView.setText(text);
             return;
         }
         int month=Integer.parseInt(d.substring(0,2));
-        int day=Integer.parseInt(d.substring(2,4));
-        int year=Integer.parseInt(d.substring(4));
+        int day=Integer.parseInt(d.substring(3,5));
+        int year=Integer.parseInt(d.substring(6));
         if(month<1||month>12){
-            fail();
+            TextView textView =findViewById(R.id.status);
+            String text="Invalid date";
+            textView.setText(text);
             return;
         }
         if(month==9||month==4||month==6||month==11) {
             if (day < 1 || day > 30) {
-                fail();
+                TextView textView =findViewById(R.id.status);
+                String text="Invalid date";
+                textView.setText(text);
                 return;
             }
         }
         else{
             if(day<1||day>31){
-                fail();
+                TextView textView =findViewById(R.id.status);
+                String text="Invalid date";
+                textView.setText(text);
                 return;
             }
         }
         if(year<2019){
-            fail();
+            TextView textView =findViewById(R.id.status);
+            String text="Invalid date";
+            textView.setText(text);
             return;
         }
+        Log.e("create","date end");
         edit=findViewById(R.id.time);
         String t=edit.getText().toString();
+        Log.e("create","time start");
         if(t.length()!=5){
-            fail();
+            TextView textView =findViewById(R.id.status);
+            String text="Invalid time";
+            textView.setText(text);
             return;
         }
-        int hour=Integer.parseInt(d.substring(0,2));
-        int minute=Integer.parseInt(d.substring(3));
+        int hour=Integer.parseInt(t.substring(0,2));
+        int minute=Integer.parseInt(t.substring(3));
         if(hour<0||hour>24){
-            fail();
+            TextView textView =findViewById(R.id.status);
+            String text="Invalid time";
+            textView.setText(text);
             return;
         }
         if(minute<0||minute>59){
             TextView textView =findViewById(R.id.status);
-            textView.setText("@string/status3");
+            String text="Invalid time";
+            textView.setText(text);
             return;
         }
+        Log.e("create","time end");
         Date date=new Date(year,month,day,hour,minute);
         e.add(new Event(n,date));
         TextView textView =findViewById(R.id.status);
-        textView.setText("@string/status");
-
+        String text="New Event Created";
+        textView.setText(text);
+        Log.e("create","finish");
     }
 }

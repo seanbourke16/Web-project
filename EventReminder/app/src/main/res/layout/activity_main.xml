@@ -43,6 +43,18 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/sendInv"
             />
+
+        <TextView
+            android:id="@+id/nextlab"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:text="@string/next" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="@string/next" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
