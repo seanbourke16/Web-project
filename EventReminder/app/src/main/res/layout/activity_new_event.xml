@@ -17,7 +17,8 @@
         <TextView
             android:id="@+id/textName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="30dp"
             android:text= "@string/textName" />
 
         <EditText
@@ -41,7 +42,8 @@
         <TextView
             android:id="@+id/textDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="30dp"
             android:text="@string/textDate" />
 
         <EditText
@@ -64,7 +66,8 @@
         <TextView
             android:id="@+id/textTime"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="30dp"
             android:text="@string/textTime" />
 
         <EditText
@@ -96,7 +99,8 @@
         <TextView
             android:id="@+id/status"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
+            android:textSize="30dp"
             android:text=""
             />
 

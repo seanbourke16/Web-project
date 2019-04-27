@@ -12,14 +12,15 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="209dp">
 
         <TextView
             android:id="@+id/recip"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recip" />
+            android:layout_height="30dp"
+            android:text="@string/recip"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/rec"
@@ -42,8 +43,9 @@
         <TextView
             android:id="@+id/textName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/textName" />
+            android:layout_height="30dp"
+            android:text="@string/textName"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/name"
@@ -66,8 +68,9 @@
         <TextView
             android:id="@+id/textDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/textDate" />
+            android:layout_height="30dp"
+            android:text="@string/textDate"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/date"
@@ -89,8 +92,9 @@
         <TextView
             android:id="@+id/textTime"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/textTime" />
+            android:layout_height="30dp"
+            android:text="@string/textTime"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/time"
@@ -120,8 +124,9 @@
         <TextView
             android:id="@+id/status"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="" />
+            android:layout_height="30dp"
+            android:text=""
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/back"

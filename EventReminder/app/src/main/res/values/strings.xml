@@ -5,6 +5,7 @@
     <string name="newEvent">Add New Event</string>
     <string name="checkEvents">Check Events</string>
     <string name="sendInv">Send Event Invitations</string>
+    <string name="checkInv">Check Event Invitations</string>
     <string name="next">Next Event</string>
 
     <string name="textName">Enter Event Name</string>

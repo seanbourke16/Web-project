@@ -112,7 +112,7 @@ public class SendInv extends AppCompatActivity {
         }
         Log.e("create","time end");
         Date date=new Date(year,month,day,hour,minute);
-        e.add(new Event(n,date));
+        //e.add(new Event(n,date));
         TextView textView =findViewById(R.id.status);
         String text="New Event Created";
         textView.setText(text);
